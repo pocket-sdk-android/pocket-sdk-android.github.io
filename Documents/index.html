@@ -15,63 +15,45 @@
       <meta name="author" content="Pocket Games">
     
     
-      <meta name="description" content="PocketSDK-iOS接入文档
-一、导入PocketSDK
-将PocketSDK文件夹拖入工程。
-
-将配置文件 PocketSDKConfig_(appId).plist 拖入工程。
-
-点击 TARGETS—&amp;gt; Build Phases —&amp;gt; Link Binary With Libraries 添加以下库:
-
-AdSupport.framework
-SystemConfigura">
+      <meta name="description" content="SDK-Android接入指南一、概述本文档用于指导游戏公司快速接入pocket手游SDK，本SDK为安卓游戏提供登录、注册、快速注册、支付等功能。本文档面向的读者是安卓游戏开发者，包括客户端和服务器。
+二、运行环境此版本sdk需要在jdk1.7上运行，要求android sdk版本为19或者以上
+三、导入PocketSDK资源包
+将PocketGamesSDK文件夹导入工程。
+将facebook">
     
 
-    <meta name="description" content="PocketSDK-iOS接入文档
-一、导入PocketSDK
-将PocketSDK文件夹拖入工程。
-
-将配置文件 PocketSDKConfig_(appId).plist 拖入工程。
-
-点击 TARGETS—&amp;gt; Build Phases —&amp;gt; Link Binary With Libraries 添加以下库:
-
-AdSupport.framework
-SystemConfigura">
+    <meta name="description" content="SDK-Android接入指南一、概述本文档用于指导游戏公司快速接入pocket手游SDK，本SDK为安卓游戏提供登录、注册、快速注册、支付等功能。本文档面向的读者是安卓游戏开发者，包括客户端和服务器。
+二、运行环境此版本sdk需要在jdk1.7上运行，要求android sdk版本为19或者以上
+三、导入PocketSDK资源包
+将PocketGamesSDK文件夹导入工程。
+将facebook">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PocketSDK">
 <meta property="og:url" content="http://yoursite.com/Documents/index.html">
 <meta property="og:site_name" content="PocketSDK">
-<meta property="og:description" content="PocketSDK-iOS接入文档
-一、导入PocketSDK
-将PocketSDK文件夹拖入工程。
-
-将配置文件 PocketSDKConfig_(appId).plist 拖入工程。
-
-点击 TARGETS—&amp;gt; Build Phases —&amp;gt; Link Binary With Libraries 添加以下库:
-
-AdSupport.framework
-SystemConfigura">
-<meta property="og:image" content="http://i2.tietuku.com/38bb53cc0ec0e1e0.png">
-<meta property="og:image" content="http://i2.tietuku.com/520d033d21f089d3.png">
-<meta property="og:updated_time" content="2015-10-13T13:05:26.000Z">
+<meta property="og:description" content="SDK-Android接入指南一、概述本文档用于指导游戏公司快速接入pocket手游SDK，本SDK为安卓游戏提供登录、注册、快速注册、支付等功能。本文档面向的读者是安卓游戏开发者，包括客户端和服务器。
+二、运行环境此版本sdk需要在jdk1.7上运行，要求android sdk版本为19或者以上
+三、导入PocketSDK资源包
+将PocketGamesSDK文件夹导入工程。
+将facebook">
+<meta property="og:image" content="http://i1.tietuku.com/e6645db27f997958.png">
+<meta property="og:image" content="http://i1.tietuku.com/9e0a8d7ebea2b036.png">
+<meta property="og:updated_time" content="2015-10-14T09:32:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PocketSDK">
-<meta name="twitter:description" content="PocketSDK-iOS接入文档
-一、导入PocketSDK
-将PocketSDK文件夹拖入工程。
-
-将配置文件 PocketSDKConfig_(appId).plist 拖入工程。
-
-点击 TARGETS—&amp;gt; Build Phases —&amp;gt; Link Binary With Libraries 添加以下库:
-
-AdSupport.framework
-SystemConfigura">
+<meta name="twitter:description" content="SDK-Android接入指南一、概述本文档用于指导游戏公司快速接入pocket手游SDK，本SDK为安卓游戏提供登录、注册、快速注册、支付等功能。本文档面向的读者是安卓游戏开发者，包括客户端和服务器。
+二、运行环境此版本sdk需要在jdk1.7上运行，要求android sdk版本为19或者以上
+三、导入PocketSDK资源包
+将PocketGamesSDK文件夹导入工程。
+将facebook">
     
     
     
       <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     
     <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/xcode.css">
 
     <script src="/js/jquery.min.js"></script>
 
@@ -100,7 +82,7 @@ SystemConfigura">
 
         <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">PocketSDK</a></h1>
 
-        <span class="panel-cover__subtitle panel-subtitle">iOS</span>
+        <span class="panel-cover__subtitle panel-subtitle">Android</span>
 
         <hr class="panel-cover__divider" />
         <p class="panel-cover__description">
@@ -197,73 +179,412 @@ classes that you can use:
     </header>
 
     <section class="post">
-      <h1 id="PocketSDK-iOS接入文档">PocketSDK-iOS接入文档</h1><hr>
-<h2 id="一、导入PocketSDK">一、导入PocketSDK</h2><ul>
-<li><p>将PocketSDK文件夹拖入工程。</p>
+      <h1 id="SDK-Android接入指南">SDK-Android接入指南</h1><h2 id="一、概述">一、概述</h2><p>本文档用于指导游戏公司快速接入pocket手游SDK，本SDK为安卓游戏提供登录、注册、快速注册、支付等功能。本文档面向的读者是安卓游戏开发者，包括客户端和服务器。</p>
+<h2 id="二、运行环境">二、运行环境</h2><p>此版本sdk需要在jdk1.7上运行，要求android sdk版本为19或者以上</p>
+<h2 id="三、导入PocketSDK资源包">三、导入PocketSDK资源包</h2><ul>
+<li>将PocketGamesSDK文件夹导入工程。</li>
+<li>将facebook文件夹导入工程。</li>
+<li><p>将google-play-services_lib文件夹导入工程。</p>
+<p>  <img src="http://i1.tietuku.com/e6645db27f997958.png" alt=""></p>
 </li>
-<li><p>将配置文件 PocketSDKConfig_(appId).plist 拖入工程。</p>
+<li><p>游戏应用引用以上库文件 </p>
+<p>  <img src="http://i1.tietuku.com/9e0a8d7ebea2b036.png" alt=""></p>
 </li>
-<li><p>点击 <em>TARGETS—&gt; Build Phases —&gt; Link Binary With Libraries</em> 添加以下库:</p>
+<li><p>将sdk提供的<em>assets</em>文件夹下面的资源拷入游戏项目目录下</p>
+</li>
+<li><p>拷贝sdk下面的<em>manifest</em>里面的所有<em>activity</em>到项目主目录下的<em>manifest</em>中，以下为实例，以给出的manifest文件中得为准</p>
+<pre><code>  <span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGLoginActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:screenOrientation</span>=<span class="value">"landscape"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+   /&gt;</span>
+ <span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGLoginPortraitActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:screenOrientation</span>=<span class="value">"portrait"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+   /&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.GGBuyByPlatformActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:screenOrientation</span>=<span class="value">"landscape"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+ /&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.SelectChargeTypeActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:screenOrientation</span>=<span class="value">"landscape"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span> 
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGPlatformPayFragmentActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:screenOrientation</span>=<span class="value">"landscape"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="comment">&lt;!-- 注册页面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGRegisterActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="comment">&lt;!-- 选择渠道界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGPayCenterFragmentActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:screenOrientation</span>=<span class="value">"landscape"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="comment">&lt;!--打开支付网页  --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGPayWebActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    &gt;</span>
+<span class="tag">&lt;/<span class="title">activity</span>&gt;</span>
+<span class="comment">&lt;!-- 个认中心界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGAccountManageActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+     /&gt;</span>
+<span class="comment">&lt;!-- 忘记密码界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGForgetPasswActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@style/IntentTheme"</span>
+  /&gt;</span>
+<span class="comment">&lt;!-- 賬戶忘记密码界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGModifyPwdActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+   /&gt;</span>
+<span class="comment">&lt;!-- 賬戶忘记密码界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGOrderHistoryActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+   /&gt;</span>
+<span class="comment">&lt;!-- 广告界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGAdActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+     /&gt;</span>
+
+<span class="comment">&lt;!-- 登录暂停页 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span> 
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGLoginPauseActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"orientation|keyboardHidden|screenSize"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="comment">&lt;!-- 消息 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span> 
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGIntentWebActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="comment">&lt;!-- 绑定邮箱界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGBindEmailPwdActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+ /&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGBindEmailConfirmActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+  /&gt;</span>
+<span class="comment">&lt;!-- 绑定账号界面 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.LoginProgressActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+  /&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CGForgetFragmentActivity"</span>
+     <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span>
+    /&gt;</span>
+<span class="comment">&lt;!-- 客服 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.UserCustomerActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar.Fullscreen"</span> /&gt;</span>
+ <span class="comment">&lt;!-- 竖版支付 --&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.PayPortraitActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.CardPayPortraitActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar"</span> 
+    <span class="attribute">android:windowSoftInputMode</span>=<span class="value">"stateHidden|adjustResize"</span>/&gt;</span>
+<span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.activity.OfficialPayPortraitActivity"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar"</span> /&gt;</span>
+
+<span class="tag">&lt;<span class="title">meta-data</span>
+    <span class="attribute">android:name</span>=<span class="value">"channelID"</span>
+    <span class="attribute">android:value</span>=<span class="value">"1"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">meta-data</span> 
+    <span class="attribute">android:name</span>=<span class="value">"advChannel"</span>
+    <span class="attribute">android:value</span>=<span class="value">"GooglePlay"</span>/&gt;</span>
+<span class="tag">&lt;<span class="title">meta-data</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.google.android.gms.version"</span>
+    <span class="attribute">android:value</span>=<span class="value">"@integer/google_play_services_version"</span> /&gt;</span> 
+<span class="comment">&lt;!-- recevier --&gt;</span>
+<span class="tag">&lt;<span class="title">receiver</span> 
+    <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.receiver.TrackingReceiver"</span>
+    <span class="attribute">android:exported</span>=<span class="value">"true"</span> &gt;</span>
+     <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"com.android.vending.INSTALL_REFERRER"</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">receiver</span>&gt;</span>
+
+<span class="comment">&lt;!-- facebook --&gt;</span>
+ <span class="tag">&lt;<span class="title">activity</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.facebook.FacebookActivity"</span>
+    <span class="attribute">android:configChanges</span>=<span class="value">"keyboard|keyboardHidden|screenLayout|screenSize|orientation"</span>
+    <span class="attribute">android:label</span>=<span class="value">"@string/app_name"</span>
+    <span class="attribute">android:theme</span>=<span class="value">"@android:style/Theme.Translucent.NoTitleBar"</span> /&gt;</span>
+
+<span class="tag">&lt;<span class="title">provider</span> <span class="attribute">android:authorities</span>=<span class="value">"com.facebook.app.FacebookContentProvider426352630876651"</span>
+  <span class="attribute">android:name</span>=<span class="value">"com.facebook.FacebookContentProvider"</span>
+  <span class="attribute">android:exported</span>=<span class="value">"true"</span>/&gt;</span>
+<span class="tag">&lt;<span class="title">meta-data</span>
+    <span class="attribute">android:name</span>=<span class="value">"com.facebook.sdk.ApplicationId"</span>
+    <span class="attribute">android:value</span>=<span class="value">"@string/facebook_SiegeGrazingLandVietnam_app_id"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">service</span> <span class="attribute">android:name</span>=<span class="value">"com.pocket.sdk.service.AppCheckService"</span> /&gt;</span>  
+</code></pre></li>
+</ul>
 <ul>
-<li>AdSupport.framework</li>
-<li>SystemConfiguration.framework </li>
-<li>MobileCoreServices.framework </li>
-<li>CoreTelephony.framework </li>
-<li>libz.dylib </li>
-<li>StoreKit.framework </li>
-<li>Security.framework<p></p></li>
+<li><p>拷贝sdk下面的<em>manifest</em>里面的所有<em>permission</em>到项目主目录下的<em>manifest</em>中</p>
+<pre><code>&lt;uses-permission android:<span class="property">name</span>=<span class="string">"com.android.vending.BILLING"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.INTERNET"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.SYSTEM_ALERT_WINDOW"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.ACCESS_NETWORK_STATE"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.ACCESS_WIFI_STATE"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.READ_PHONE_STATE"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.MOUNT_UNMOUNT_FILESYSTEMS"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.READ_LOGS"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.ACCESS_COARSE_LOCATION"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.GET_TASKS"</span> /&gt;
+&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.INTERACT_ACROSS_USERS_FULL"</span>/&gt;
+</code></pre><p>  <strong>注意事项:</strong></p>
+<p>  <strong>①.确保assets下面的文件全部替换，没有以前的残余文件<br>  ②.确保配置为参数文档中的最新参数<br>  ③.根据提供的参数设置好<em>meta-data</em>中得<em>channelID</em>（平台提供的渠道id）和<em>advChannel</em>（平台提供的渠道名称）<br>  ④.在provider中修改<em>authorities</em>结尾的facebook提供的<em>appid</em>为正确值</strong></p>
+</li>
 </ul>
-</li>
-<li><p>点击 <em>TARGETS—&gt; Build Settings</em>，搜索 <em>Other Linker Flags</em>，添加<code>-ObjC</code>。</p>
-</li>
-<li><p>点击 <em>PROJECT —&gt; Build Settings</em>，搜索 <em>Other C Flags</em>，添加<code>-DSQLITE_HAS_CODEC</code>。</p>
-</li>
-<li><p>点击 <em>TARGETS—&gt; Info</em>，在 <em>URL Types</em> 中添加项，参数URL Scheme填写<code>fb311294709063394</code>。</p>
-</li>
-<li><p><code>#import “PocketSDKManager.h</code> 。</p>
-</li>
-</ul>
-<blockquote>
-<p><strong>注意事项</strong></p>
-<p><strong>①. SDK使用了SQLCipher加密数据库,工程中无需也不可添加libsqlite3.0.dylib或 libsqlite3.dylib。<br><br>②. 如果项目工程中使用了libcurl.a (使用cocos2dx开发的游戏,大部分会用到该静态库),请将静态库 libcrypto.a从目录PoketSDK/SQLCipher/下删除。</strong></p>
-</blockquote>
-<h2 id="二、PocketSDK开放接口">二、PocketSDK开放接口</h2><ul>
-<li><h4 id="SDK初始化、生命周期方法、代理方法实现">SDK初始化、生命周期方法、代理方法实现</h4></li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"PocketSDKManager.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> : <span class="title">UIResponder</span> &lt;<span class="title">UIApplicationDelegate</span>, <span class="title">PocketSDKDelegate</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">UIWindow</span> *window;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"AppDelegate.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application</span><br><span class="line"> didFinishLaunchingWithOptions: (<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">self</span><span class="variable">.window</span> = [[<span class="built_in">UIWindow</span> alloc] initWithFrame:[[<span class="built_in">UIScreen</span> mainScreen] bounds]];</span><br><span class="line">	<span class="keyword">self</span><span class="variable">.window</span><span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> whiteColor];</span><br><span class="line">	[<span class="keyword">self</span><span class="variable">.window</span> makeKeyAndVisible];</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ------------------------------------------------- *\</span><br><span class="line">   ------------------ SDK初始化方法 ------------------</span><br><span class="line">\* ------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 发布至AppStore的包（官方包）可不调用。</span><br><span class="line">	 * 一般官方包的channelId设置为0（默认值），企业包为-1。</span><br><span class="line">	 * 【注意】如若调用，请在SDK初始化方法之前调用！ </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager setChannelId:<span class="number">0</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 必须调用。</span><br><span class="line">	 * SDK初始化方法。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager shareManagerWithServerAddress:<span class="string">@"&lt;SDK服务器地址&gt;"</span></span><br><span class="line">                                              appId:<span class="string">@"&lt;分配的AppId&gt;"</span></span><br><span class="line">                                             appKey:<span class="string">@"&lt;分配的AppKey&gt;"</span>];</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 可不调用。</span><br><span class="line">	 * 设置SDK显示模式为横屏或竖屏，未设置则SDK将自动进行匹配。 </span><br><span class="line">	 */</span>                                     </span><br><span class="line">	[PocketSDKManager setDisplayMode:PocketSDKDisplayModeLandscape];</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 必须调用。</span><br><span class="line">	 * 设置代理，代理对象需实现协议&lt;PocketSDKDelegate&gt;中的方法。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager setDelegate:<span class="keyword">self</span>];</span><br><span class="line">	</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ------------------------------------------------- *\</span><br><span class="line">   ------------------ SDK生命周期方法 ----------------</span><br><span class="line">\* ------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidEnterBackground:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 必须调用。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager applicationDidEnterBackground];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)applicationWillEnterForeground:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 必须调用。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager applicationWillEnterForeground];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidBecomeActive:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 必须调用。 </span><br><span class="line">     */</span></span><br><span class="line">	[PocketSDKManager applicationDidBecomeActive];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application </span><br><span class="line">			openURL:(<span class="built_in">NSURL</span> *)url</span><br><span class="line">  sourceApplication:(<span class="built_in">NSString</span> *)sourceApplication </span><br><span class="line">		 annotation:(<span class="keyword">id</span>)annotation &#123;</span><br><span class="line">		 </span><br><span class="line">    <span class="comment">/* 必须调用。 </span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">return</span> [PocketSDKManager handleOpenURL:url sourceApplication:sourceApplication];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ------------------------------------------------- *\</span><br><span class="line">   ------------------- SDK代理方法 -------------------</span><br><span class="line">\* ------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#pragma mark - PocketSDKDelegate</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 必须实现的代理方法。</span><br><span class="line"> * 应该能够随时返回一个每次都不相同的游戏交易id。</span><br><span class="line"> * 可以选择下列两种方式实现：</span><br><span class="line"> * ①. 从游戏服务器同步获取并返回。</span><br><span class="line"> * ②. 返回一个之前已经获取并被持有待用的交易id（返回后不再持有），随后从游戏服务器异步获取新的交易id持有待用。</span><br><span class="line"> * 不能返回有效gameOrderId则返回nil。 </span><br><span class="line"> */</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)gameOrderId &#123;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="string">@"游戏交易id"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 必须实现的代理方法。</span><br><span class="line"> * 应该能够返回游戏内的角色信息。</span><br><span class="line"> * PocketSDKRoleId: 角色id; PocketSDKRoleLevel: 角色等级; PocketSDKRoleZoneId: 角色所在区服。 </span><br><span class="line"> */</span></span><br><span class="line">- (<span class="built_in">NSDictionary</span> *)roleInfoInTheGame &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> @&#123;PocketSDKRoleId:<span class="string">@"9527"</span>,PocketSDKRoleLevel:<span class="string">@"60"</span>,PocketSDKRoleZoneId:<span class="string">@"1001"</span>&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 必须实现的代理方法。</span><br><span class="line"> * 切换账号。此处应实现注销游戏角色、返回登录界面,同时弹出SDK登录窗口（showLoginView）等操作。 </span><br><span class="line"> */</span></span><br><span class="line">-(<span class="keyword">void</span>)switchUser &#123;</span><br><span class="line">    </span><br><span class="line">    ...</span><br><span class="line">	[PocketSDKManager showLoginView];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 登录成功的代理方法。</span><br><span class="line"> * 会返回平台userId和token。 </span><br><span class="line"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)loginDidSuccessWithUserInfo:(<span class="built_in">NSDictionary</span> *)userInfo &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSString</span> *userId = userInfo[<span class="string">@"userId"</span>];</span><br><span class="line">    <span class="built_in">NSString</span> *token = userInfo[<span class="string">@"token"</span>];</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 可不实现的代理方法。</span><br><span class="line"> * 可以在该方法中处理SDK初始化失败的后续操作，调用Block: retryInit();可以重新初始化SDK。</span><br><span class="line"> * 若不实现该方法，则当SDK初始化失败时，SDK会自行弹出重试界面及处理后续逻辑。</span><br><span class="line"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)initSdkDidFailWithRetry:(<span class="keyword">void</span> (^)())retryInit &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="preprocessor">#error 若不实现该方法，代理对象中不应有此方法（空方法也是一种实现）。</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 可选实现的代理方法。</span><br><span class="line"> * SDK支付界面已经关闭的代理方法。</span><br><span class="line"> * 可以在该方法中刷新游戏界面，以便在游戏内体现充值结果（道具或虚拟货币增加）。 </span><br><span class="line"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)paymentViewDidClose &#123;</span><br><span class="line"></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="四、PocketSDK开放接口">四、PocketSDK开放接口</h2><pre><code><span class="comment">/*获取sdk实力对象*/</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> PocketGamesSDK <span class="title">getInstance</span><span class="params">()</span></span>{}；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.getInstance()；
+
+
+<span class="comment">/*
+ * 初始化sdk方法
+ * @param url                平台分配的请求url
+ * @param appId            平台分配的appid
+ * @param appKey            平台分配的appkey
+ * @param context            依附context
+ * @return            返回sdk实例对象
+ */</span>    
+<span class="function"><span class="keyword">public</span> PocketGamesSDK <span class="title">initSDK</span><span class="params">(String url, <span class="keyword">int</span> appId, String appKey,<span class="keyword">final</span> Context context)</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">initSDK</span><span class="params">(<span class="string">"http://sdk-test.changic.net.cn:8191/pocketgames/"</span>, <span class="number">1020</span>, <span class="string">"89646e72-f06e-4756-8352-cf779b7ea0ae"</span>, <span class="keyword">this</span>)</span></span>;
+
+
+<span class="comment">/*
+ * 设置打印日志开关
+ * @param  isDebug  调试开关
+ */</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDebug</span><span class="params">(<span class="keyword">boolean</span> isDebug)</span>
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">setDebug</span><span class="params">(<span class="keyword">true</span>)</span></span>;<span class="comment">//此处true为开启</span>
+
+<span class="comment">/*
+ * 设置sdk横竖屏
+ * @param drection 方向         PocketGamesSDK.LANDSCAPE  横屏
+ *                               PocketGamesSDK.PORTRAIT   竖屏
+ */</span>
+ <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDrection</span><span class="params">(<span class="keyword">int</span> drection)</span>；
+
+ <span class="comment">//使用实例</span>
+ PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">setDrection</span><span class="params">(PocketGamesSDK.PORTRAIT)</span></span>;
+
+
+<span class="comment">/*
+ * 设置游戏回调监听
+ * @param callback 回调，由接入主类实现接口
+ */</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">addGameListener</span><span class="params">(IDispatcherGameCallback callback)</span>
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">addGameListener</span><span class="params">(<span class="keyword">this</span>)</span></span>; 
+
+
+<span class="comment">/*
+ * 自动登录
+ */</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">autoLogin</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">autoLogin</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 绑定区服
+ * @param zoneId 服务器Id
+ * @param roleId 角色Id
+ * @param level  角色等级
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bindZone</span><span class="params">(String zoneId, String roleId, String level)</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">bindZone</span><span class="params">(zoneId,roleId,level)</span>；
+
+
+<span class="comment">/*
+ * 打开登录界面
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showLogin</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">showLogin</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 打开支付界面
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showPayment</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">showPayment</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 显示悬浮框
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showGameBar</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">showGameBar</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 关闭悬浮框
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">closeGameBar</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">closeGameBar</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 退出游戏接口
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">logout</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">logout</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 销毁sdk接口
+ */</span>
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroySDK</span><span class="params">()</span>；
+
+<span class="comment">//使用实例</span>
+PocketGamesSDK.<span class="title">getInstance</span><span class="params">()</span>.<span class="title">destroySDK</span><span class="params">()</span>；
+
+
+<span class="comment">/*
+ * 游戏实现的回调监听接口
+ */</span>
+<span class="keyword">public</span> <span class="keyword">abstract</span> interface IDispatcherGameCallback </span>{
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLogin</span><span class="params">(UserInfoBean bean)</span></span>; <span class="comment">//登录回调监听</span>
+<span class="function"><span class="keyword">public</span> RoleBean <span class="title">onRoleInfo</span><span class="params">()</span></span>;  <span class="comment">//支付获取游戏订单与信息接口</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSwitchAccount</span><span class="params">()</span></span>;  <span class="comment">//切换账号接口</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCloseSdkWindow</span><span class="params">(<span class="keyword">boolean</span> flag)</span></span>;  <span class="comment">//关闭sdk界面</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exit</span><span class="params">()</span></span>;   <span class="comment">//退出</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onInitSuccess</span><span class="params">(<span class="keyword">boolean</span> isInit)</span></span>; <span class="comment">//初始化成功</span>
+</code></pre><p>}</p>
+<h2 id="五、接入具体流程">五、接入具体流程</h2><p><strong>注意:<br>①接入需按照下面的流程步骤，顺序展开<br>②在登录成功之后进入游戏时，需要调用绑定区服接口<br>PocketGamesSDK.getInstance().bindZone(zoneId,roleId,level)；</strong></p>
 <ul>
-<li><h4 id="绑定区服接口">绑定区服接口</h4></li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* ------------------------------------------------- *\</span><br><span class="line">   ------------------- SDK绑定区服 -------------------</span><br><span class="line">\* ------------------------------------------------- */</span></span><br><span class="line">	...</span><br><span class="line">	<span class="comment">/* 必须调用。</span><br><span class="line">	 * 在游戏角色进入游戏后调用此方法。</span><br><span class="line">	 * 必须保证在调用该方法时，代理方法- (NSDictionary *)roleInfoInTheGame;已经能够返回角色信息。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager roleDidEnterGame];</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
-<ul>
-<li><h4 id="界面相关">界面相关</h4></li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* ------------------------------------------------- *\</span><br><span class="line">   ------------------- SDK界面显示 -------------------</span><br><span class="line">\* ------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">	<span class="comment">/* 游戏启动后,调用该方法进行登录。</span><br><span class="line">	 * 若用户之前登录过则会自动登录，否则会弹出登录界面。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager tryAutoLoginElseShowLoginView];</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 调用该方法显示SDK支付界面。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager showPaymentView];</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 游戏可在需要时隐藏悬浮按钮，但应及时恢复悬浮按钮的显示。 </span><br><span class="line">	 */</span></span><br><span class="line">	[PocketSDKManager hideFloatButton];</span><br><span class="line">	[PocketSDKManager showFloatButton];</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h2 id="三、本地化（国际化）">三、本地化（国际化）</h2><blockquote>
-<p><strong>PocketSDK支持多种语言。对于SDK支持的语言，根据设备设置的语言不同，SDK界面文字会采用相应的语言显示，但前提是游戏工程已经添加了该语言的本地化文件。</strong></p>
-</blockquote>
-<p>为了使SDK支持某种语言显示，可以按照以下步骤为游戏工程添加本地化文件。</p>
-<ol>
-<li><p>在工程中新建一个Strings File文件，可以命名为Localizable。</p>
-</li>
-<li><p>选中Localizable.strings,打开Xcode的右侧边栏,点击 <em>Localization</em> 中的 <em>Localize…</em> 按键。</p>
-<p> <img src="http://i2.tietuku.com/38bb53cc0ec0e1e0.png" alt=""></p>
-</li>
-<li><p>在 <em>PROJECT -&gt; Info</em> 的 <em>Localizations</em> 中添加希望支持的语言。</p>
-</li>
-</ol>
-<h2 id="四、真机调试、生成ipa文件">四、真机调试、生成ipa文件</h2><ul>
-<li><h4 id="p12和mobileprovision文件">p12和mobileprovision文件</h4><p>  在首次提供SDK时，会提供2个p12文件和3个mobileprovision文件。均双击（使用xcode）安装即可。</p>
-<p>  真机调试或打包前需要配置 <em>TARGETS -&gt; Build Settings</em> 中的参数 <em>Provisioning Profile</em> 和 <em>Code Signing Identity</em>。</p>
-<p>  <em>Provisioning Profile</em> 的debug参数选择 (projectName)_Dev<br></p>
-<p>  <em>Provisioning Profile</em> 的release参数选择 (projectName)_AdHoc<br><strong>出提审包时需改为 (projectName)_AppStore</strong></p>
-<p>  分别点击 <em>Code Signing Identify</em> 的 <em>debug</em> 和 <em>release</em> 选择（提示的）与之匹配的 <em>Code Signing Identity</em>。</p>
-<p>  <img src="http://i2.tietuku.com/520d033d21f089d3.png" alt=""></p>
-<p>  另外，设置 <em>TARGETS -&gt; General</em> 中的 <em>Bundle identifier</em> 为平台提供的 BundleId。</p>
-</li>
-<li><h4 id="生成ipa文件">生成ipa文件</h4><p>  从Xcode6开始通过 <em>Product -&gt; Archive</em> 打包工程需要使用开发者账号,所以请使用xcodebuild 进行打包。</p>
-</li>
+<li>接入主类实现<em>IDispatcherGameCallback</em>接口<br></li>
+<li><p>初始化准备</p>
+<pre><code><span class="comment">// 设置调试模式是否开启</span>
+PocketGamesSDK.getInstance().setDebug(<span class="literal">true</span>);<span class="comment">//此处true为开启</span>
+
+<span class="comment">// 设置横竖屏</span>
+PocketGamesSDK.getInstance().setDrection(PocketGamesSDK.PORTRAIT);
+
+<span class="comment">// 设置游戏回调监听</span>
+PocketGamesSDK.addGameListener(<span class="keyword">this</span>); 
+
+<span class="comment">// 初始化sdk</span>
+PocketGamesSDK.getInstance().initSDK(<span class="string">"http://sdk-test.changic.net.cn:8191/pocketgames/"</span>, <span class="number">1020</span>, <span class="string">"89646e72-f06e-4756-8352-cf779b7ea0ae"</span>, <span class="keyword">this</span>);
+</code></pre></li>
+<li><p>游戏悬浮框的实现</p>
+<pre><code><span class="comment">// 注意：必须在activity这两个生命周期</span>
+
+<span class="annotation">@Override</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>{
+    <span class="keyword">super</span>.onResume();
+    PocketGamesSDK.getInstance().showGameBar();
+}
+
+<span class="annotation">@Override</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span> </span>{
+    <span class="keyword">super</span>.onPause();
+    PocketGamesSDK.getInstance().closeGameBar();
+}
+</code></pre></li>
+<li><p>游戏支付获取角色订单信息实现</p>
+<pre><code><span class="comment">// 注意：每次回调这个接口，都需要重新获取最新的游戏订单号</span>
+
+@Override
+<span class="keyword">public</span> RoleBean onRoleInfo() {
+    Random <span class="built_in">random</span> = <span class="keyword">new</span> Random();
+    RoleBean roleBean = <span class="keyword">new</span> RoleBean();
+    roleBean.setGameOrderId(<span class="keyword">String</span>.valueOf(<span class="built_in">random</span>.nextInt()));
+    roleBean.setGameZoneId(<span class="string">"1001"</span>);
+    roleBean.setRoleId(<span class="string">"xuchao"</span>);
+    roleBean.setLevel(<span class="string">"99"</span>);
+
+    <span class="comment">// 以下为特殊渠道用，如果在asstes下没有pocketgames_exinfo.properties文件，可不写</span>
+    <span class="keyword">try</span> {
+        Properties properties = <span class="keyword">new</span> Properties();
+        properties.load(getApplicationContext().getAssets().<span class="built_in">open</span>(<span class="string">"pocketgames_exinfo.properties"</span>));
+        <span class="keyword">String</span> exInfo = properties.getProperty(<span class="string">"exInfo"</span>);
+        roleBean.setExinfo(exInfo);
+    } <span class="keyword">catch</span> (IOException e) {
+        <span class="comment">// TODO Auto-generated catch block</span>
+        e.printStackTrace();
+    }
+    <span class="keyword">return</span> roleBean;
+}    
+</code></pre></li>
+<li><p>登录的实现</p>
+<pre><code><span class="comment">//注意：如果游戏登陆和初始化是异步的，那么需要用以下方法，如果不是则在登陆接口直接调用sdk登陆即可</span>
+
+<span class="keyword">private</span> <span class="keyword">boolean</span> sdkInit =<span class="keyword">false</span>;
+
+<span class="annotation">@Override</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onInitSuccess</span><span class="params">(<span class="keyword">final</span> <span class="keyword">boolean</span> isInit)</span> </span>{
+    sdkInit = isInit;
+    <span class="keyword">handler</span>.sendEmptyMessage(<span class="number">0</span>);
+}
+
+<span class="comment">// 比如这是游戏登陆的方法</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">doLogin</span><span class="params">()</span></span>{
+    <span class="comment">//PocketGamesSDK.getInstance().autoLogin();  //非异步则直接调用登陆即可</span>
+    <span class="keyword">handler</span>.sendEmptyMessage(<span class="number">0</span>);
+}
+
+Handler <span class="keyword">handler</span> = <span class="keyword">new</span> Handler(){
+    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(android.os.Message msg)</span> </span>{
+        <span class="keyword">if</span>(msg.what == <span class="number">0</span>){
+            <span class="keyword">if</span>(sdkInit){
+                <span class="comment">//自动登录</span>
+                PocketGamesSDK.getInstance().autoLogin();
+            }
+        }
+    };
+};
+</code></pre></li>
 </ul>
 
     </section>
@@ -336,6 +657,9 @@ classes that you can use:
       })(jQuery);
     </script>
     
+
+    <script src="//cdn.bootcss.com/highlight.js/8.5/highlight.min.js"></script>
+    <script >hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>
